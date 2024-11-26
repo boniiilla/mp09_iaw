@@ -12,14 +12,8 @@ echo "<br/>";
 #lo mostramos:
 var_dump($frasearray);
 
-#a partir de aquí habrá que tratar el contenido y resolver...
-$cuentaA;
-
-$frase = 'Este es un ejemplo con varias letras A y a';
 $cuentaA = 0;
 
-// Convertimos la frase a un array de caracteres
-$frasearray = str_split($frase);
 
 // Recorremos el array para contar las 'a' y 'A'
 foreach ($frasearray as $letra) {
