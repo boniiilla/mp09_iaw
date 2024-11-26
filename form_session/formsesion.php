@@ -4,10 +4,13 @@
 </head>
 <body>
 <form action="sesion.php" method="GET">
-<input type="text" name="nombre"/>
-<input type="text" name="apellido"/>
-<input type="text" name="ciudad"/>
-<input type="submit" name="submit" value="sumar"/>
+Nombre<br>
+<input type="text" name="nombre"/><br>
+Apellido<br>
+<input type="text" name="apellido"/><br>
+Ciudad<br>
+<input type="text" name="ciudad"/><br>
+<input type="submit" name="submit" value="Login"/>
 </form>
 </body>
 </html>
