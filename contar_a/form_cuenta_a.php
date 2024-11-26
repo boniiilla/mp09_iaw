@@ -3,7 +3,7 @@
 <title>FORM CUENTA A</title>
 </head>
 <body>
-<form action="contar_a.php" method="GET">
+<form action="contar_a_session.php" method="GET">
 <textarea name="frase" cols="30" rows="4"></textarea><br/>
 <input type="submit" name="submit" value="contar A"/>
 </form>
