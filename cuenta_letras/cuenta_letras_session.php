@@ -22,7 +22,7 @@
             }
         }
 
-        $_SESSION['cuentaLetas'] = [];
+        $_SESSION['cuentaLertas'] = [];
 
         foreach ($cuentaLetras as $letra => $count) {
             if (!isset($_SESSION['cuentaLetras'][$letra])) {
