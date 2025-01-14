@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
-    <title>Añadir Equipo</title>
+    <title>Editar Equipo</title>
     <style>
         body {
             background-color: #111111;
@@ -153,28 +153,6 @@
             box-sizing: border-box;
         }
         
-        .add_fast {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            color: #FFFFFF;
-        }
-
-        .add_fast input[type="button"] {
-            justify-content: center;
-            width: 30%;
-            color: #FFFFFF;
-            background-color: #111111;
-            transform: scale(1);
-            transition: transform 0.7s ease, background 0.7s ease;
-        }
-
-        .add_fast input[type="button"]:hover {
-            background-color:rgb(49, 49, 49);
-            transform: scale(1.05);
-        }
     </style>
 </head>
 <body>
@@ -194,39 +172,35 @@
             <img src="img/ea-sports.png" alt="LaLiga" width="70" height="70" class="easports">
         </div>
         <div class="form_clubes">
-            <form action="add_clubes.php" method="POST">
+            <?php 
+            if (isset($_GET['id']) && isset($_SESSION['array_clubes'][$_GET['id']])) {
+                $id = $_GET['id'];
+                $club = $_SESSION['array_clubes'][$id];
+            } else {
+                // Redirigir a index.php si no se encuentra el club
+                header('Location: index.php');
+                exit();
+            }
+            ?>
+            <form action="update_clubes.php" method="POST">
+                <input type="hidden" name="id" value="<?php echo htmlspecialchars($id); ?>">
                 <label for="nombre">NOMBRE:</label>
-                <input type="text" name="nombre" id="nombre" required placeholder="Introduce el nombre...">
+                <input type="text" name="nombre" id="nombre" required value="<?php echo htmlspecialchars($club['nombre']); ?>">
                 <label for="ciudad">CIUDAD:</label>
-                <input type="text" name="ciudad" id="ciudad" required placeholder="Introduce la ciudad...">
+                <input type="text" name="ciudad" id="ciudad" required value="<?php echo htmlspecialchars($club['ciudad']); ?>">
                 <label for="estadio">ESTADIO:</label>
-                <input type="text" name="estadio" id="estadio" required placeholder="Introduce el estadio..."> 
+                <input type="text" name="estadio" id="estadio" required value="<?php echo htmlspecialchars($club['estadio']); ?>"> 
                 <label for="fundacion">FUNDACION:</label>
-                <input type="number" name="fundacion" id="fundacion" required placeholder="Introduce el año de fundación...">
+                <input type="number" name="fundacion" id="fundacion" required value="<?php echo htmlspecialchars($club['fundacion']); ?>">
                 <label for="presidente">PRESIDENTE ACTUAL:</label>
-                <input type="text" name="presidente" id="presidente" required placeholder="Introduce el presidente...">
+                <input type="text" name="presidente" id="presidente" required value="<?php echo htmlspecialchars($club['presidente']); ?>">
                 <label for="entrenador">ENTRENADOR ACTUAL:</label>
-                <input type="text" name="entrenador" id="entrenador" required placeholder="Introduce el entrenador...">
+                <input type="text" name="entrenador" id="entrenador" required value="<?php echo htmlspecialchars($club['entrenador']); ?>">
                 <label for="escudo">ESCUDO (URL):</label>
-                <input type="text" name="escudo" id="escudo" required placeholder="Introduce la URL del escudo en .png...">
-                <input type="submit" value="Añadir Club">
+                <input type="text" name="escudo" id="escudo" required value="<?php echo htmlspecialchars($club['escudo']); ?>">
+                <input type="submit" value="Modificar Club">
             </form>
-            <div class="add_fast">
-                <?php 
-                if (isset($_SESSION['array_clubes'])) {
-                    $array_clubs = $_SESSION['array_clubes'];
-                } else {
-                    $array_clubs = [];
-                }
-                $num_fast = 10 - $_SESSION['id'];
-                
-                if ($num_fast > 0) {
-                    echo "<input type='button' class='add_fast' value='Añadir Rápido (" . $num_fast . ")' onclick='location.href=\"add_clubes_fast.php\";'/>";
-                }   
-                ?>
-            </div>
         </div>
-        
     </div>
 </body>
 </html>

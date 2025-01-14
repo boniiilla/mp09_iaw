@@ -13,11 +13,13 @@ La aplicación permite realizar las siguientes operaciones sobre los equipos alm
 ## Datos a almacenar
 
 Cada equipo está representado como un array asociativo con los siguientes atributos:
-- **Nombre del equipo** (string): El nombre del equipo, por ejemplo, "FC Barcelona".
-- **Número de títulos ganados** (integer): La cantidad de títulos ganados por el equipo, por ejemplo, 26.
-- **Valor del equipo en millones** (float): El valor aproximado del equipo en millones de euros, por ejemplo, 700.5.
-- **Ciudad de origen** (string): La ciudad donde está ubicado el equipo, por ejemplo, "Madrid".
-- **Año de fundación** (integer): El año en que se fundó el equipo, por ejemplo, 1902.
+- **Nombre del Club** (string): El nombre del club, por ejemplo, "FC Barcelona".
+- **Ciudad** (string): La ciudad donde está ubicado el club, por ejemplo, "Madrid".
+- **Estadio** (string): El nombre del estadio del club, por ejemplo, "Santiago Bernabéu".
+- **Año de Fundación** (integer): El año en que se fundó el club, por ejemplo, 1902.
+- **Presidente** (string): El nombre del presidente del club, por ejemplo, "Florentino Pérez".
+- **Entrenador** (string): El nombre del entrenador actual del club, por ejemplo, "Carlo Ancelotti".
+- **Escudo** (string): Una URL o ruta al archivo de la imagen del escudo del club.
 
 Estos datos serán almacenados en una variable de sesión para garantizar la persistencia durante la navegación.
 
@@ -37,3 +39,5 @@ El proyecto consta de las siguientes páginas principales:
    
 4. **Borrar Equipo**:
    - Permite eliminar un equipo seleccionado de la lista.
+
+   
