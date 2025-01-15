@@ -159,7 +159,7 @@
     <header>
         <div class="img">
             <a href="index.php">
-                <img src="img/laligaea.png" alt="LaLiga EA" width="70" height="50" class="laligaea">
+                <img src="img/laligaea.png" alt="LaLiga EA" width="70" height="50" class="laligaea" style="margin-top: 10px;">
             </a>
         </div>
         <div class="buttons">

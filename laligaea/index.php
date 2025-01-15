@@ -26,6 +26,7 @@
             height: 70px;
         }
 
+
         .button {
             width: 150px;
             background: none;
@@ -96,7 +97,7 @@
         }
 
         .club_card:hover {
-            transform: scale(1.03);
+            transform: scale(1.05);
         }
 
         .club_escudo {
@@ -155,6 +156,8 @@
             height: 5.8vw;
         }
 
+
+
     </style>
 </head>
 <body>
@@ -167,10 +170,64 @@
     } else {
         $array_clubes = [];
     }
+
+    if (isset($_GET['order_by'])) {
+        $order_by = $_GET['order_by'];
+    } else {
+        $order_by = '';
+    }
+
+    if (isset($_GET['order'])) {
+        $order = $_GET['order'];
+    } else {
+        $order = '';
+    }
+
+    if ($order_by && $order) {
+        if ($order == 'asc') {
+            for ($i = 0; $i < count($array_clubes) - 1; $i++) {
+                for ($j = 0; $j < count($array_clubes) - $i - 1; $j++) {
+                    if ($array_clubes[$j][$order_by] > $array_clubes[$j + 1][$order_by]) {
+                        $array_temp = $array_clubes[$j];
+                        $array_clubes[$j] = $array_clubes[$j + 1];
+                        $array_clubes[$j + 1] = $array_temp;
+                    }
+                }
+            }
+        } else {
+            for ($i = 0; $i < count($array_clubes) - 1; $i++) {
+                for ($j = 0; $j < count($array_clubes) - $i - 1; $j++) {
+                    if ($array_clubes[$j][$order_by] < $array_clubes[$j + 1][$order_by]) {
+                        $array_temp = $array_clubes[$j];
+                        $array_clubes[$j] = $array_clubes[$j + 1];
+                        $array_clubes[$j + 1] = $array_temp;
+                    }
+                }
+            }
+        }
+    }
     ?>
     <header>
         <div class="img">
-            <img src="img/laligaea.png" alt="LaLiga EA" width="70" height="50" class="laligaea">
+            <img src="img/laligaea.png" alt="LaLiga EA" width="70" height="50" class="laligaea" style="margin-top: 10px;">
+        </div>
+        <div class="filter" style="margin-left: 20%; margin-top: 15px; font-family: "Jockey One", sans-serif;">  
+            <form action="index.php" method="get" onchange="this.submit();" style="font-family: 'Jockey One', sans-serif;">
+                <select name="order_by" style="font-family: 'Jockey One', sans-serif; font-size: 16px; background-color: #000000; color: #FFFFFF; border: 3px solid #ff003f; border-radius: 30px; padding: 10px 10px; letter-spacing: 1.5px; font-weight: bold;">
+                    <option value="">FILTRO</option>
+                    <option value="nombre" <?php if ($order_by == 'nombre') echo 'selected'; ?> >Nombre</option>
+                    <option value="ciudad" <?php if ($order_by == 'ciudad') echo 'selected'; ?>>Ciudad</option>
+                    <option value="fundacion" <?php if ($order_by == 'fundacion') echo 'selected'; ?>>Fundación</option>
+                    <option value="presidente" <?php if ($order_by == 'presidente') echo 'selected'; ?>>Presidente</option>
+                    <option value="entrenador" <?php if ($order_by == 'entrenador') echo 'selected'; ?>>Entrenador</option>
+                </select>
+                <select name="order" style="font-family: 'Jockey One', sans-serif;font-size: 16px; background-color: #000000; color: #FFFFFF; border: 3px solid #ff003f; border-radius: 30px; padding: 10px 10px; letter-spacing: 1.5px; font-weight: bold;">
+                    <option value="">ORDEN</option>
+                    <option value="asc" <?php if ($order == 'asc') echo 'selected'; ?>>Ascendente</option>
+                    <option value="desc" <?php if ($order == 'desc') echo 'selected'; ?>>Descendente</option>
+                </select>
+                <!-- <input type="submit" value="Aplicar" style="font-size: 16px; background-color: #1a1a1a; color: #FFFFFF; border: 2px solid #ff003f; border-radius: 30px; padding: 10px 10px;"> -->
+            </form>
         </div>
         <div class="buttons">
             <input type="button" class="button" value="Añadir Equipo" onclick="location.href='form_add_clubes.php';"/> 
