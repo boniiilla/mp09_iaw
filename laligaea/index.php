@@ -241,7 +241,7 @@
         <div class="clubs_list">
             <?php
             if (count($array_clubes) == 0) {
-                echo "<h2 style='font-size: 3.5vw; margin-top: 150px; color: #bbbbbb; letter-spacing: 2px;'>SIN REGISTROS</h2>";
+                echo "<h2 style='font-size: 3.5vw; margin-top: 150px; margin-left: -50px; color: #bbbbbb; letter-spacing: 2px;'>SIN REGISTROS</h2>";
             } else {
                 foreach ($array_clubes as $index => $club) {
                     echo "<div class='club_card'>";
