@@ -1,0 +1,150 @@
+body {
+    background-color: #111111;
+    margin: 0;
+    font-family: "Jockey One", sans-serif;
+    color: #FFFFFF;
+}
+
+header {
+    background: linear-gradient(to top, #111111, #000000) 0;
+    padding: 15px 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: "Jockey One", sans-serif;
+    height: 70px;
+}
+
+.button_login {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 3%;
+    transition: transform 0.5s ease;
+    transform: scale(1);
+}
+
+.button_login:hover {
+    transform: scale(1.2);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+
+.button {
+    width: 150px;
+    background: none;
+    font-family: "Jockey One", sans-serif;
+    border: 3px solid #ff003f;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #FFFFFF;
+    margin: 10px ;
+    padding: 10px 0px;
+    transform: scale(1);
+    transition: transform 0.7s ease, background 0.7s ease;
+    letter-spacing: 1.5px;
+}
+
+.button:hover {
+    transform: scale(1.15);
+    background-color: #ff002E;
+    color: #FFFFFF;
+}
+
+header img {
+    margin-right: -30px;
+    margin-left: 10px;
+    justify-content: top;
+    align-content: flex-start;
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 25px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 6.5vw;
+    padding: 0;
+    margin-top: 0;
+    letter-spacing: 0.2vw;
+}
+
+.easports {
+    margin: 2vw 1vw;
+    width: 5.2vw;
+    height: 5.2vw;
+}
+
+.form_clubes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    padding: 0;
+    width: 40vw;
+    font-family: "Jockey One", sans-serif;
+    margin-top: -30px;
+}
+
+.form_clubes label {
+    color: #ff003f;
+    font-size: 1.3vw;
+    font-weight: bold;
+    padding: 20px 0;
+    letter-spacing: 1.4px;
+    font-family: "Jockey One", sans-serif;
+    font-size: 1.5vw;
+}
+
+.form_clubes input[type="submit"] {
+    background-color: #ff003f;
+    transform: scale(1);
+    transition: transform 0.7s ease, background 0.7s ease;
+}
+
+.form_clubes input[type="submit"]:hover {
+    background-color:rgb(175, 0, 44);
+    transform: scale(1.05);
+}
+
+.form_clubes input {
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid #ff003f;
+    color: #000000;
+    background-color: #FFFFFF;
+    width: 100%;
+    font-family: "Jockey One", sans-serif;
+    font-size: 1vw;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.form_clubes input[type="text"], .form_clubes input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}

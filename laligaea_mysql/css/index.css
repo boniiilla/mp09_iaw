@@ -1,0 +1,250 @@
+body {
+    background-color: #131313;
+    margin: 0;
+    font-family: "Jockey One", sans-serif;
+    color: #FFFFFF;
+    margin-bottom: 75px;
+}
+
+header {
+    background: linear-gradient(to top,#131313, #000000) 0;
+    padding: 15px 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: "Jockey One", sans-serif;
+    height: 70px;
+}
+
+.button_login {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 3%;
+    transition: transform 0.5s ease;
+    transform: scale(1);
+}
+
+.button_login:hover {
+    transform: scale(1.2);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+
+.button {
+    width: 150px;
+    background: none;
+    font-family: "Jockey One", sans-serif;
+    border: 3px solid #ff003f;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #FFFFFF;
+    margin: 10px ;
+    padding: 10px 0px;
+    transform: scale(1);
+    transition: transform 0.7s ease, background 0.7s ease;
+    letter-spacing: 1.5px;
+}
+
+.button:hover {
+    transform: scale(1.15);
+    background-color: #ff002E;
+    color: #FFFFFF;
+}
+
+header img {
+    margin-right: -30px;
+    margin-left: 10px;
+    justify-content: top;
+    align-content: flex-start;
+}
+
+.clubs_list {
+    margin-top: -30px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 0;
+    flex-wrap: wrap;
+}
+
+.club_card {
+    background-color: #1a1a1a;
+    border: 1px solid #ff003f;
+    border-radius: 15px;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex-basis: 200;
+}
+
+.club_card:hover {
+    transform: scale(1.05);
+}
+
+.club_escudo {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 0px;
+}
+
+.club_card h3 {
+    margin: 10px 0;
+    font-size: 25px;
+    color: #ff003f;
+    letter-spacing: 2px;
+}
+
+.club_card p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.club_buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.club_buttons .button {
+    width: 6vw;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 00px;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 6.5vw;
+    padding: 0;
+    margin-top: 0;
+    letter-spacing: 0.2vw;
+}
+
+.easports {
+    margin: 2vw 1vw;
+    width: 5.2vw;
+    height: 5.2vw;
+}
+
+.filter {
+    display: flex;
+    justify-content: center; /* Centra el filtro */
+    margin-bottom: 50px;
+}
+
+.filter form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter input[type="text"] {
+    padding: 10px;
+    border-radius: 30px;
+    border: 3px solid #ff003f;
+    background-color: #1a1a1a;
+    color: #FFFFFF;
+    font-size: 18px;
+    width: 300px;
+    height: 24px;
+    transition: transform 0.7s ease;
+}
+
+.filter input[type="text"]:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+.filter button {
+    width: 75px;
+    height: 50px;   
+    background: none;
+    font-family: "Jockey One", sans-serif;
+    border: 3px solid #ff003f;
+    background-color: #ff003f;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #FFFFFF;
+    margin-left: 10px;
+    transform: scale(1);
+    transition: transform 0.7s ease, background 0.7s ease;
+    letter-spacing: 1.5px;
+}
+
+.filter button:hover {
+    transform: scale(1.15);
+    background-color:#ff5675;
+    color: #FFFFFF;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.filter img {
+    margin-top: -2px;
+}
+
+.favorite_club {
+    margin-top: -50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.favorite_club select {
+    padding: 10px;
+    border-radius: 30px;
+    border: 3px solid #ff003f;
+    background-color: #1a1a1a;
+    color: #FFFFFF;
+    font-size: 17px;
+    transition: transform 0.7s ease;
+}
+
+.favorite_club select:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+.favorite_club_image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.favorite_club_image img {
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+}
+
+.favorite_club_image img:hover {
+    transform: scale(1.1);
+}

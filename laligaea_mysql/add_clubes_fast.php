@@ -91,7 +91,88 @@ if ($add_id == 1) {
     $presidente = 'Marián Mouriño';
     $entrenador = 'Claudio Giráldez';
     $escudo = 'https://assets.laliga.com/assets/2019/06/07/small/celta.png';
+} else if ($add_id == 11) {
+    $nombre = 'CD Leganés';
+    $ciudad = 'Leganés';
+    $estadio = 'Estadio Municipal de Butarque';
+    $fundacion = '1928';
+    $presidente = 'Jeff Luhnow';
+    $entrenador = 'Borja Jiménez';
+    $escudo = 'https://assets.laliga.com/assets/2019/06/07/small/leganes.png';
+} else if ($add_id == 12) {
+    $nombre = 'Rayo Vallecano';
+    $ciudad = 'Madrid';
+    $estadio = 'Estadio de Vallecas';
+    $fundacion = '1924';
+    $presidente = 'Raúl Martín Presa';
+    $entrenador = 'Iñigo Pérez';
+    $escudo = 'https://assets.laliga.com/assets/2023/04/27/small/57d9950a8745ead226c04d37235c0786.png';
+} else if ($add_id == 13) {
+    $nombre = 'Getafe CF';
+    $ciudad = 'Getafe';
+    $estadio = 'Coliseum Alfonso Pérez';
+    $fundacion = '1983';
+    $presidente = 'Ángel Torres Sánchez';
+    $entrenador = 'José Bordalás';
+    $escudo = 'https://assets.laliga.com/assets/2019/06/07/small/getafe.png';
+} else if ($add_id == 14) {
+    $nombre = 'Real Valladolid';
+    $ciudad = 'Valladolid';
+    $estadio = 'José Zorrilla';
+    $fundacion = '1928';
+    $presidente = 'Ronaldo Nazário';
+    $entrenador = 'Diego Cocca';
+    $escudo = 'https://assets.laliga.com/assets/2019/06/07/small/valladolid.png';
+} else if ($add_id == 15) {
+    $nombre = 'CA Osasuna';
+    $ciudad = 'Pamplona';
+    $estadio = 'El Sadar';
+    $fundacion = '1920';
+    $presidente = 'Luis Sabalza';
+    $entrenador = 'Vicente Moreno';
+    $escudo = 'https://assets.laliga.com/assets/2019/06/07/small/osasuna.png';
+} else if ($add_id == 16) {
+    $nombre = 'RCD Espanyol';
+    $ciudad = 'Barcelona';
+    $estadio = 'RCDE Stadium';
+    $fundacion = '1900';
+    $presidente = 'Chen Yansheng';
+    $entrenador = 'Manolo González';
+    $escudo = 'https://assets.laliga.com/assets/2019/06/07/small/espanyol.png';
+} else if ($add_id == 17) {
+    $nombre = 'RCD Mallorca';
+    $ciudad = 'Palma de Mallorca';
+    $estadio = 'Visit Mallorca Estadi';
+    $fundacion = '1916';
+    $presidente = 'Andy Kohlberg';
+    $entrenador = 'Jagoba Arrasate';
+    $escudo = 'https://assets.laliga.com/assets/2019/06/07/small/mallorca.png';
+} else if ($add_id == 18) {
+    $nombre = 'UD Las Palmas';
+    $ciudad = 'Las Palmas';
+    $estadio = 'Estadio de Gran Canaria';
+    $fundacion = '1949';
+    $presidente = 'Miguel Ángel Ramírez';
+    $entrenador = 'Diego Martínez';
+    $escudo = 'https://assets.laliga.com/assets/2019/06/07/small/las-palmas.png';
+} else if ($add_id == 19) {
+    $nombre = 'Girona FC';
+    $ciudad = 'Girona';
+    $estadio = 'Estadi Montilivi';
+    $fundacion = '1930';
+    $presidente = 'Delfí Geli';
+    $entrenador = 'Míchel';
+    $escudo = 'https://assets.laliga.com/assets/2022/06/22/small/8f43addbb29e4a72f5e90b6edfe4728f.png';
+} else if ($add_id == 20) {
+    $nombre = 'Deportivo Alavés';
+    $ciudad = 'Vitoria-Gasteiz';
+    $estadio = 'Mendizorroza';
+    $fundacion = '1921';
+    $presidente = 'Alfonso Fernández';
+    $entrenador = 'Eduardo Coudet';
+    $escudo = 'https://assets.laliga.com/assets/2020/09/01/small/27002754a98bf535807fe49a24cc63ea.png';
 }
+
 
 $stmt = $conn->prepare("INSERT INTO clubes (nombre, ciudad, estadio, fundacion, presidente, entrenador, escudo, add_fast) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("sssisssi", $nombre, $ciudad, $estadio, $fundacion, $presidente, $entrenador, $escudo, $add_fast);
